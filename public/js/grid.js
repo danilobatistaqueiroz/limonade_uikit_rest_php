@@ -1,5 +1,5 @@
 function listToGrid(url, tableID){
-  $(tableID + " > tbody").empty();
+  //$(tableID + " > tbody").empty();
   $.getJSON(url , function(data) {
     var tbl_body = document.createElement("tbody");
     var odd_even = false;
@@ -51,15 +51,7 @@ function listToGrid(url, tableID){
 }
 
 function deleteRow(row){
-  sendAndLoad(url, {id:1}, "delete");
 }
 
 function editRow(row){
-  $("#divEditUserForm input[id=id]").val($('#'+row+'_1').text());
-  $("#divEditUserForm input[id=name]").val($('#'+row+'_2').text());
-  $("#divEditUserForm input[id=email]").val($('#'+row+'_3').text());
-  $("#divEditUserForm input[id=age]").val($('#'+row+'_4').text());
-  $("#divEditUserForm input[id=phone]").val($('#'+row+'_5').text());
-  $("#divEditUserForm").slideToggle();
-  $("#divBlockQuotes").slideToggle();
 }

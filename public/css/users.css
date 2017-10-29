@@ -1,0 +1,22 @@
+/* ############### style for input search ######### */
+input[name=search] {
+    border-radius:10px;
+}
+input[name=search] {
+    width: 220px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+input[name=search]:focus {
+    width: 60%;
+}
+/* ############### style for input search ######### */
+
+/* ############### style for container (editForms and newForms) ######### */
+label {
+  display: block; width: 100px;
+}
+.uk-comment-header {
+  background: #ebf7fd;
+}
+/* ############### style for container (editForms and newForms) ######### */

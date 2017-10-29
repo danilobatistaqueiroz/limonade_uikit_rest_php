@@ -21,12 +21,8 @@
   </div>
   <div class="form-group">
     <button type="button" class="uk-button-secondary">Update</button>
-    <button type="button" class="uk-button-primary" formnovalidate onclick="editRow();">Cancel</button>
+    <button type="button" class="uk-button-primary" formnovalidate onclick="cancelEditUser();">Cancel</button>
   </div>
 <!--/form-->
   </header>
 <!--/article-->
-<style>
-  label { display: block; width: 100px; }
-  .uk-comment-header { background: #ebf7fd; }
-</style>
