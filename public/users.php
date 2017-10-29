@@ -1,4 +1,4 @@
-<div class="uk-inline" style="margin-top:60px;">
+<div class="uk-inline" style="margin-top:30px;">
   <div class="uk-container">
     <h1 class="uk-heading-divider">Limonade - Uikit</h1>
     <div class="uk-margin uk-margin-medium-top uk-margin-medium-left uk-medium-margin-medium-bottom">
@@ -43,7 +43,7 @@
         </thead>
       </table>
     </div>
-    <article class="uk-comment uk-comment-primary">
+    <article class="uk-comment uk-comment-primary" style="margin-left:1%;width:95%">
       <header class="uk-comment-header">
         <img class="uk-comment-avatar" src="images/placeholder_avatar.svg" width="50" height="50" alt="">
         <h4 class="uk-comment-title">Danilo Batista de Queiroz</h4>

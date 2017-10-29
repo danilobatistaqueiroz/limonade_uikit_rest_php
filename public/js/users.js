@@ -41,10 +41,10 @@ $(function() {
       sendAndLoad(url, params, type);
     }
   }
-  $('a').click(function() {
-    var href = $(this).attr('href').substr(1).toLowerCase();
-    callRestApi(href);
-  });
+  //$('a').click(function() {
+  //  var href = $(this).attr('href').substr(1).toLowerCase();
+  ///  callRestApi(href);
+//  });
   listToGrid(url, tableID)
 });
 /*################# StartUp ####################*/

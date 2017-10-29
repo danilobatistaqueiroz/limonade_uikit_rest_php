@@ -22,8 +22,8 @@
             </a>
           </li>
           <li>
-            <a href="#delete">
-              <span class="uk-icon uk-margin-small-right" uk-icon="icon: info"></span>About
+            <a href="#" onclick="$('#divMain').css({marginLeft:'0px'});$('#divMain').width('100%');$('#divSideBar').hide();">
+              <span class="uk-icon uk-margin-small-right" uk-icon="icon: info"></span>Info
             </a>
           </li>
         </ul>

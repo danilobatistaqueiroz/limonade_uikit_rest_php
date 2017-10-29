@@ -33,8 +33,8 @@
     <p class="text-danger">Phone field is Empty!</p>
   </div>
   <div class="form-group">
-    <button class="btn btn-success">Add New User</button>
-    <input type="button" class=class="uk-button-warning" formnovalidate onclick="cancelNewUser();" value="Cancel" />
+    <button class="uk-button-primary">Add New User</button>
+    <input type="button" class="uk-button-danger" formnovalidate onclick="cancelNewUser();" value="Cancel" />
   </div>
 </form>
 </header>

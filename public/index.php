@@ -13,9 +13,47 @@
   <link href="css/users.css" rel="stylesheet" type="text/css" />
 </head>
 <body style="background-color:#f8f8f8">
-  <!--div id="divConfirmDelete" ></div-->
+
   <div id="divHeader"></div>
-  <div id="divMain"></div>
-  <!--button uk-toggle="target: #my-id" type="button">okok</button-->
+
+  <div uk-grid>
+    <div id="divMain" style="margin-left:10%;width:80%" class="uk-card uk-card-default uk-card-body"></div>
+    <!-- Sidebar -->
+    <style>
+      .uk-card-default {
+        background:#f8f8f8;
+      }
+      .fa-stack{
+        margin-left:15px;
+      }
+    </style>
+    <div id="divSideBar" class="uk-card uk-card-default uk-card-body" style="width:10%">
+      <br/>
+      <br/>
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-square-o fa-stack-2x"></i>
+        <i class="fa fa-facebook fa-stack-1x"></i>
+      </span>
+      <br/>
+      <br/>
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-square-o fa-stack-2x"></i>
+        <i class="fa fa-twitter fa-stack-1x"></i>
+      </span>
+      <br/>
+      <br/>
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-square-o fa-stack-2x"></i>
+        <i class="fa fa-comment-o fa-stack-1x"></i>
+      </span>
+      <br/>
+      <br/>
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-square-o fa-stack-2x"></i>
+        <i class="fa fa-bookmark-o fa-stack-1x"></i>
+      </span>
+    </div>
+  </div>
+
 </body>
 </html>
