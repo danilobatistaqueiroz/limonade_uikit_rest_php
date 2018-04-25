@@ -6,7 +6,7 @@
   </div>
   <div class="form-group">
     <label for="name">Name:</label>
-    <input type="text" name="name" class="form-control" placeholder="Enter User Name" autofocus required />
+    <input type="text" name="name" class="form-control" placeholder="Enter User Name" autofocus data-validate="required, min:5" />
   </div>
   <div class="form-group">
     <p class="text-danger">Name field is Empty!</p>
@@ -20,21 +20,21 @@
   </div>
   <div class="form-group">
     <label for="age">Age:</label>
-    <input type="text" name="age" class="form-control" placeholder="Enter User Age" autofocus required />
+    <input type="number" name="age" class="form-control" placeholder="Enter User Age" autofocus data-validate="required, number" />
   </div>
   <div class="form-group">
     <p class="text-danger">Age field is Empty!</p>
   </div>
   <div class="form-group">
     <label for="phone">Phone:</label>
-    <input type="text" name="phone" class="form-control" placeholder="Enter Phone Age" autofocus required />
+    <input type="tel" name="phone" class="form-control" placeholder="Enter Phone Age" autofocus data-validate="required, number" />
   </div>
   <div class="form-group">
     <p class="text-danger">Phone field is Empty!</p>
   </div>
   <div class="form-group">
-    <button class="uk-button-primary">Add New User</button>
-    <input type="button" class="uk-button-danger" formnovalidate onclick="cancelNewUser();" value="Cancel" />
+    <input type="submit" class="uk-button uk-button-primary" value="Add New User" />
+    <button type="button" class="uk-button uk-button-secondary" formnovalidate onclick="cancelNewUser();" >Cancel</button>
   </div>
 </form>
 </header>

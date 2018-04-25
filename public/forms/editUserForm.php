@@ -20,8 +20,8 @@
     <input type="text" id="phone" name="phone" class="uk-input uk-form-width-medium uk-form-small" value="">
   </div>
   <div class="form-group">
-    <button type="button" class="uk-button-secondary">Update</button>
-    <button type="button" class="uk-button-primary" formnovalidate onclick="cancelEditUser();">Cancel</button>
+    <button type="button" class="uk-button uk-button-secondary">Update</button>
+    <button type="button" class="uk-button uk-button-primary" formnovalidate onclick="cancelEditUser();">Cancel</button>
   </div>
 <!--/form-->
   </header>
