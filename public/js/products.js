@@ -1,10 +1,11 @@
-function loadUsersGrid(){
+function loadProductsGrid(){
 	/*################# Globals ####################*/
-	window.myApproot = "";
-	window.myUrl = myApproot + '/rest/api.php/users';
-	window.myTableID = "#tableUsers";
-	window.deleteRowFunction = "loadDeleteUser";
-	window.editRowFunction = "loadEditUser";
+	window.myApproot = ""; //se for iniciado o servidor numa pasta acima
+	window.myUrl = myApproot + '/rest/api.php/products';
+	//window.myUrl = myApproot + '/rest/api/products'; //quando usando pelo Apache com o .htaccess configurado
+	window.myTableID = "#tableProducts";
+	window.deleteRowFunction = "loadDeleteProduct";
+	window.editRowFunction = "loadEditProduct";
 	/*################# Globals ####################*/
 	listToGrid(myUrl, myTableID);
 }
@@ -46,28 +47,23 @@ $(function() {
       sendAndLoad(myUrl, params, type);
     }
   }
-
-  loadUsersGrid();
-  
+  loadProductsGrid();
 });
 /*################# StartUp ####################*/
 
-
-
-
 /*################# Forms ####################*/
-function cancelNewUser(){
-  $('#divNewUserForm').slideUp();
+function cancelNewProduct(){
+  $('#divNewProductForm').slideUp();
   $("#divBlockQuotes").slideDown();
 }
-function cancelEditUser(){
-  $('#divEditUserForm').slideUp();
+function cancelEditProduct(){
+  $('#divEditProductForm').slideUp();
   $("#divBlockQuotes").slideDown();
 }
-function newUser(){
-  loadNewUser();
-  $("#divEditUserForm").slideUp();
-  $("#divNewUserForm").slideDown();
+function newProduct(){
+  loadNewProduct();
+  $("#divEditProductForm").slideUp();
+  $("#divNewProductForm").slideDown();
   $("#divBlockQuotes").slideUp();
 }
 /*################# Forms ####################*/
@@ -78,17 +74,17 @@ function deleteRow(row){
   sendAndLoad(myUrl, {id:1}, "delete");
 }
 function editRow(row){
-  loadEditUser(row);
+  loadEditProduct(row);
 }
 */
-function configureUserEditForm(row){
-  $("#divEditUserForm input[id=id]").val($('#'+row+'_1').text());
-  $("#divEditUserForm input[id=name]").val($('#'+row+'_2').text());
-  $("#divEditUserForm input[id=email]").val($('#'+row+'_3').text());
-  $("#divEditUserForm input[id=age]").val($('#'+row+'_4').text());
-  $("#divEditUserForm input[id=phone]").val($('#'+row+'_5').text());
-  $("#divNewUserForm").slideUp();
-  $("#divEditUserForm").slideDown();
+function configureProductEditForm(row){
+  $("#divEditProductForm input[id=id]").val($('#'+row+'_1').text());
+  $("#divEditProductForm input[id=name]").val($('#'+row+'_2').text());
+  $("#divEditProductForm input[id=email]").val($('#'+row+'_3').text());
+  $("#divEditProductForm input[id=age]").val($('#'+row+'_4').text());
+  $("#divEditProductForm input[id=phone]").val($('#'+row+'_5').text());
+  $("#divNewProductForm").slideUp();
+  $("#divEditProductForm").slideDown();
   $("#divBlockQuotes").slideUp();
 }
 /*################# Grid ####################*/

@@ -1,39 +1,39 @@
 /*################# Its better than w3-include-html ####################*/
 /*################# w3-include-html lose the javascript funcionalities ####################*/
-function loadNewUser(){
+function loadNewProduct(){
   $.ajax({
-    url:'forms/newUserForm.php',
+    url:'forms/newProductForm.php',
     method: 'GET',
     contentType: "application/json; charset=utf-8",
     success: function(data) {
-      $('#divNewUserForm').empty();
-      $('#divNewUserForm').append(data);
+      $('#divNewProductForm').empty();
+      $('#divNewProductForm').append(data);
     }, error: function(result) {
-      $.notify(JSON.stringify(result).replace(/"/g, ''), {
+      $.notify(JSON.stringify(xhr).replace(/"/g, ''), {
         className: "error",
         autoHideDelay: 2000
       });
     }
   });
 };
+//loadNewProduct();
 
-function loadEditUser(row){
+function loadEditProduct(row){
   $.ajax({
-    url:'forms/editUserForm.php',
+    url:'forms/editProductForm.php',
     method: 'GET',
     contentType: "application/json; charset=utf-8",
     success: function(data) {
-      $('#divEditUserForm').empty();
-      $('#divEditUserForm').append(data);
+      $('#divEditProductForm').empty();
+      $('#divEditProductForm').append(data);
       if(row!=null)
-        configureUserEditForm(row);
+        configureProductEditForm(row);
     }
   });
 };
+//loadEditProduct(null);
 
-function loadUserScreen(){
-	loadNewUser();
-	loadEditUser(null);
+function loadProductScreen(){
 	$.ajax({
 	  url:'modals/confirmDelete.php',
 	  method: 'GET',
@@ -53,7 +53,7 @@ function loadUserScreen(){
 	  }
 	});
 	$.ajax({
-	  url:'users.php',
+	  url:'products.php',
 	  method: 'GET',
 	  contentType: "application/json; charset=utf-8",
 	  success: function(data) {
@@ -61,6 +61,5 @@ function loadUserScreen(){
 		$('#divMain').append(data);
 	  }
 	});
-	loadUsersGrid();
+	loadProductsGrid();
 }
-loadUserScreen();

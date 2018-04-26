@@ -1,9 +1,32 @@
-function listToGrid(url, tableID){
+function listToGrid(txtUrl, tableID){
   //$(tableID + " > tbody").empty();
-  $.getJSON(url , function(data) {
+  $.ajax({
+    url: txtUrl,
+    method: 'GET',
+    contentType: "application/json; charset=utf-8",
+    success: function(data) {
+		retornoToGrid(data);
+    },
+    error: function(xhr) {
+		console.log("error:");
+		console.log(xhr);
+	}
+  });
+}
+
+function deleteRow(row){
+	window[deleteRowFunction](row);
+}
+
+function editRow(row){
+	window[editRowFunction](row);
+}
+
+function retornoToGrid(data1){
     var tbl_body = document.createElement("tbody");
     var odd_even = false;
     var rowid = 1;
+	var data = [data1];
     $.each(data, function() {
         $.each(this, function(k , v) {
 			var tbl_row = tbl_body.insertRow();
@@ -46,12 +69,5 @@ function listToGrid(url, tableID){
 			odd_even = !odd_even;
         });
     });
-    $(tableID).append(tbl_body);
-  });
-}
-
-function deleteRow(row){
-}
-
-function editRow(row){
+    $(myTableID).append(tbl_body);
 }

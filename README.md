@@ -54,6 +54,10 @@ ____
 
 ### Screenshots
 
-![front](https://user-images.githubusercontent.com/32627919/39277032-2aee2e8c-48c2-11e8-9b6e-1d7ad89ce11a.PNG)
+![front5](https://user-images.githubusercontent.com/32627919/39315520-3af082ae-494d-11e8-8d6a-e862ba732057.PNG)
 
-![front2](https://user-images.githubusercontent.com/32627919/39277034-2b142736-48c2-11e8-8ce1-f1e531c2b359.PNG)
+![front6](https://user-images.githubusercontent.com/32627919/39315521-3b284d38-494d-11e8-81b4-ac73503ddbf8.PNG)
+
+![front7](https://user-images.githubusercontent.com/32627919/39315522-3b4bf210-494d-11e8-8ea4-5b19e4018cdb.PNG)
+
+![front8](https://user-images.githubusercontent.com/32627919/39315523-3b6d6526-494d-11e8-85d3-d14f4852a436.PNG)

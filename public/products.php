@@ -1,10 +1,10 @@
 <div class="uk-inline" style="margin-top:30px;">
   <div class="uk-container">
-    <h1 class="uk-heading-divider">Users</h1>
+    <h1 class="uk-heading-divider">Products</h1>
     <div class="uk-margin uk-margin-medium-top uk-margin-medium-left uk-medium-margin-medium-bottom">
-      <div id="divNewUserForm" style="display:none">
+      <div id="divNewProductForm" style="display:none">
       </div>
-      <div id="divEditUserForm" style="display:none">
+      <div id="divEditProductForm" style="display:none">
       </div>
       <div id="divBlockQuotes" style="display:block">
         <blockquote>
@@ -28,16 +28,16 @@
       </div>
     </div>
     <div class="uk-margin uk-margin-medium-top uk-margin-medium-left uk-margin-medium-bottom">
-      <input type="button" class="uk-button uk-button-primary uk-button" value="new" onclick="newUser();"/>
+      <input type="button" class="uk-button uk-button-primary uk-button" value="new" onclick="newProduct();"/>
       <input type="text" name="search" placeholder="Search.." class="uk-input uk-form-width-medium uk-form-small">
-      <table id="tableUsers" name="tableUsers" class="uk-table uk-table-hover">
+      <table id="tableProducts" name="tableProducts" class="uk-table uk-table-hover">
         <thead>
           <tr>
             <th style="display:none">id</th>
             <th>name</th>
-            <th>email</th>
-            <th>age</th>
-            <th>phone</th>
+            <th>description</th>
+            <th>price</th>
+            <th>category</th>
             <th></th>
           </tr>
         </thead>

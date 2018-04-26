@@ -7,12 +7,12 @@
         </a>
         <ul class="uk-navbar-nav">
           <li>
-            <a href="#get">
+            <a onclick="loadProductScreen();">
               <span class="uk-icon uk-margin-small-right" uk-icon="icon: refresh"></span>Products
             </a>
           </li>
           <li>
-            <a href="#get/1">
+            <a onclick="loadUserScreen();">
               <span class="uk-icon uk-margin-small-right" uk-icon="icon: users"></span>Users
             </a>
           </li>
