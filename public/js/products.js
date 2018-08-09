@@ -9,27 +9,6 @@ function loadProductsGrid(){
 	/*################# Globals ####################*/
 	listToGrid(myUrl, myTableID);
 }
-
-function sendAndLoad(sURL, params, sType) {
-  $.ajax({
-    url: sURL,
-    type: sType,
-    data: params,
-    success: function(response) {
-      $.notify(JSON.stringify(response).replace(/"/g, ''), {
-        className: "success",
-        autoHideDelay: 2000
-      });
-    },
-    error: function(xhr) {
-      $.notify(JSON.stringify(xhr).replace(/"/g, ''), {
-        className: "error",
-        autoHideDelay: 2000
-      });
-    }
-  });
-}
-
 /*################# StartUp ####################*/
 $(function() {
   function callRestApi(type) {
@@ -69,14 +48,6 @@ function newProduct(){
 /*################# Forms ####################*/
 
 /*################# Grid ####################*/
-/*
-function deleteRow(row){
-  sendAndLoad(myUrl, {id:1}, "delete");
-}
-function editRow(row){
-  loadEditProduct(row);
-}
-*/
 function configureProductEditForm(row){
   $("#divEditProductForm input[id=id]").val($('#'+row+'_1').text());
   $("#divEditProductForm input[id=name]").val($('#'+row+'_2').text());

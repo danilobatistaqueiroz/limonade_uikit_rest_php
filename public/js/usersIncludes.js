@@ -63,4 +63,6 @@ function loadUserScreen(){
 	});
 	loadUsersGrid();
 }
-loadUserScreen();
+$( document ).ready(function() {
+  loadUserScreen();
+});

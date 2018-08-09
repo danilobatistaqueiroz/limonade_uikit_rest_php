@@ -14,15 +14,16 @@ function sendAndLoad(sURL, params, sType) {
     url: sURL,
     type: sType,
     data: params,
-    success: function(response) {
-      $.notify(JSON.stringify(response).replace(/"/g, ''), {
-        className: "success",
-        autoHideDelay: 2000
-      });
-    },
     error: function(xhr) {
+      var status = "";
+      if(xhr.status==201) {
+        status = "success";
+        document.getElementById(params).style.display = "none";
+      } else {
+        status = "error";
+      }
       $.notify(JSON.stringify(xhr).replace(/"/g, ''), {
-        className: "error",
+        className: status,
         autoHideDelay: 2000
       });
     }
@@ -73,14 +74,14 @@ function newUser(){
 /*################# Forms ####################*/
 
 /*################# Grid ####################*/
-/*
+
 function deleteRow(row){
-  sendAndLoad(myUrl, {id:1}, "delete");
+  sendAndLoad(myUrl + "/" + row, row, "delete");
 }
 function editRow(row){
   loadEditUser(row);
 }
-*/
+
 function configureUserEditForm(row){
   $("#divEditUserForm input[id=id]").val($('#'+row+'_1').text());
   $("#divEditUserForm input[id=name]").val($('#'+row+'_2').text());

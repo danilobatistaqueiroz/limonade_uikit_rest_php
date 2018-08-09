@@ -44,6 +44,15 @@ vex-dialog
 
 ____
 
+### Consigure the environment
+
+php  
+composer  
+limonade  
+yarn  
+
+in the root folder type: `yarn install`
+
 ### Running the application
 
 in the webroot start the server: php -S localhost:9090

@@ -9,10 +9,10 @@ function loadNewProduct(){
       $('#divNewProductForm').empty();
       $('#divNewProductForm').append(data);
     }, error: function(result) {
-      $.notify(JSON.stringify(xhr).replace(/"/g, ''), {
-        className: "error",
-        autoHideDelay: 2000
-      });
+      //$.notify(JSON.stringify(xhr).replace(/"/g, ''), {
+      //  className: "error",
+      //  autoHideDelay: 2000
+      //});
     }
   });
 };
