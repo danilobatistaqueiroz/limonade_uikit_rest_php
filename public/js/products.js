@@ -1,5 +1,6 @@
 function loadProductsGrid(){
 	/*################# Globals ####################*/
+  window.openscreen = 'products';
 	window.myApproot = ""; //se for iniciado o servidor numa pasta acima
 	window.myUrl = myApproot + '/rest/api.php/products';
 	//window.myUrl = myApproot + '/rest/api/products'; //quando usando pelo Apache com o .htaccess configurado
@@ -10,24 +11,7 @@ function loadProductsGrid(){
 	listToGrid(myUrl, myTableID);
 }
 /*################# StartUp ####################*/
-$(function() {
-  function callRestApi(type) {
-    if (type == "get") {
-      listToGrid(myUrl, myTableID);
-    } else {
-      var params = {
-        login: 'super',
-        name: 'super user',
-        passwd: '123',
-        email: 'super@gmail.com',
-        type: 'Admin',
-        address: 'Avenue New World'
-      };
-      sendAndLoad(myUrl, params, type);
-    }
-  }
-  loadProductsGrid();
-});
+
 /*################# StartUp ####################*/
 
 /*################# Forms ####################*/
@@ -54,8 +38,11 @@ function configureProductEditForm(row){
   $("#divEditProductForm input[id=email]").val($('#'+row+'_3').text());
   $("#divEditProductForm input[id=age]").val($('#'+row+'_4').text());
   $("#divEditProductForm input[id=phone]").val($('#'+row+'_5').text());
+  $("#divNewUserForm").slideUp();
+  $("#divEditUserForm").slideUp();
   $("#divNewProductForm").slideUp();
-  $("#divEditProductForm").slideDown();
   $("#divBlockQuotes").slideUp();
+  $("#divEditProductForm").slideDown();
+  $("#divEditProductForm").css("display","block");
 }
 /*################# Grid ####################*/

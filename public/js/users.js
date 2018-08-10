@@ -1,6 +1,7 @@
 function loadUsersGrid(){
 	/*################# Globals ####################*/
 	window.myApproot = "";
+  window.openscreen = 'users';
 	window.myUrl = myApproot + '/rest/api.php/users';
 	window.myTableID = "#tableUsers";
 	window.deleteRowFunction = "loadDeleteUser";
@@ -34,7 +35,7 @@ function sendAndLoad(sURL, params, sType) {
 $(function() {
   function callRestApi(type) {
     if (type == "get") {
-      listToGrid(myUrl, myTableID);
+      listToGrid('users', myUrl, myTableID);
     } else {
       var params = {
         login: 'super',
@@ -48,7 +49,7 @@ $(function() {
     }
   }
 
-  loadUsersGrid();
+  //loadUsersGrid();
   
 });
 /*################# StartUp ####################*/
@@ -74,13 +75,6 @@ function newUser(){
 /*################# Forms ####################*/
 
 /*################# Grid ####################*/
-
-function deleteRow(row){
-  sendAndLoad(myUrl + "/" + row, row, "delete");
-}
-function editRow(row){
-  loadEditUser(row);
-}
 
 function configureUserEditForm(row){
   $("#divEditUserForm input[id=id]").val($('#'+row+'_1').text());

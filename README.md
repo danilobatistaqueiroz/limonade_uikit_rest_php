@@ -47,8 +47,6 @@ ____
 ### Consigure the environment
 
 php  
-composer  
-limonade  
 yarn  
 
 in the root folder type: `yarn install`

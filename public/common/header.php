@@ -17,7 +17,7 @@
             </a>
           </li>
           <li>
-            <a href="#put">
+            <a onclick="loadContactScreen();">
               <span class="uk-icon uk-margin-small-right" uk-icon="icon: mail"></span>Contact
             </a>
           </li>

@@ -12,10 +12,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="js/usersIncludes.js"></script>
   <script src="js/users.js"></script>
-  <script src="js/index.js"></script>
   <link href="css/users.css" rel="stylesheet" type="text/css" />
   <script src="js/productsIncludes.js"></script>
   <script src="js/products.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/contact.js"></script>
 </head>
 <body style="background-color:#f8f8f8">
 

@@ -32,37 +32,39 @@ function loadEditUser(row){
 };
 
 function loadUserScreen(){
-	loadNewUser();
-	loadEditUser(null);
-	$.ajax({
-	  url:'modals/confirmDelete.php',
-	  method: 'GET',
-	  contentType: "application/json; charset=utf-8",
-	  success: function(data) {
-		$('#divConfirmDelete').empty();
-		$('#divConfirmDelete').append(data);
-	  }
-	});
-	$.ajax({
-	  url:'common/header.php',
-	  method: 'GET',
-	  contentType: "application/json; charset=utf-8",
-	  success: function(data) {
-		$('#divHeader').empty();
-		$('#divHeader').append(data);
-	  }
-	});
-	$.ajax({
-	  url:'users.php',
-	  method: 'GET',
-	  contentType: "application/json; charset=utf-8",
-	  success: function(data) {
-		$('#divMain').empty();
-		$('#divMain').append(data);
-	  }
-	});
-	loadUsersGrid();
+  loadNewUser();
+  loadEditUser(null);
+  $.ajax({
+    url:'modals/confirmDelete.php',
+    method: 'GET',
+    contentType: "application/json; charset=utf-8",
+    success: function(data) {
+    $('#divConfirmDelete').empty();
+    $('#divConfirmDelete').append(data);
+    }
+  });
+  $.ajax({
+    url:'common/header.php',
+    method: 'GET',
+    contentType: "application/json; charset=utf-8",
+    success: function(data) {
+    $('#divHeader').empty();
+    $('#divHeader').append(data);
+    }
+  });
+  $.ajax({
+    url:'users.php',
+    method: 'GET',
+    contentType: "application/json; charset=utf-8",
+    success: function(data) {
+    $('#divMain').empty();
+    $('#divMain').append(data);
+    }
+  });
+  loadUsersGrid();
 }
+
 $( document ).ready(function() {
-  loadUserScreen();
-});
+    loadUserScreen();
+  }
+);
